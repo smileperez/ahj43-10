@@ -1,0 +1,186 @@
+* {
+    margin: 0;
+    padding: 0;
+  }
+  
+  .container {
+    position: relative;
+    left: 10px;
+    top: 10px;
+    min-width: 300px;
+    min-height: 30%;
+    width: 60%;
+    height: 800px;
+  }
+  
+  .main {
+    position: relative;
+    padding: 0;
+    margin: 4px;
+    float: left;
+    width: calc(100% - 12px);
+    height: 99%;
+    border: 2px solid blue;
+    background-color: honeydew;
+  }
+  
+  .trello {
+    position: absolute;
+    margin-top: 10%;
+    width: 100%;
+    height: 81%;
+    border: none;
+    background-color: honeydew;
+    overflow-y: auto;
+  }
+  
+  .add-tasks-control {
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    background-color: honeydew;
+  }
+  
+  .add-tasks-input {
+    border: solid 1px black;
+    background-color: white;
+    margin: 1px;
+    padding: 0;
+    width: 99%;
+    resize: none;
+    font-size: 16px;
+  }
+  
+  .add-tasks-submit {
+    float: left;
+    margin-left: 15px;
+    background-color: blue;
+    color: white;
+  }
+  
+  .add-tasks-submit:hover {
+    cursor: pointer;
+  }
+  
+  .add-tasks-cancel {
+    margin-right: 15px;
+    float: right;
+    color: red;
+  }
+  
+  .add-tasks-cancel:hover {
+    cursor: pointer;
+  }
+  
+  .board {
+    width: 98%;
+    height: 100%;
+    border: 1px solid blue;
+    background-color: whitesmoke;
+  }
+  
+  .text {
+    display: flex;
+    margin: 3px;
+    padding: 2px;
+    width: 98%;
+    height: 55px;
+    font-size: 20px;
+    border: solid 1px;
+    background-color: white;
+    resize: none;
+  }
+  
+  .message {
+    margin: 2px;
+    padding: 2px;
+    width: 98%;
+    font-size: 20px;
+    text-align: center;
+  }
+  
+  .coord {
+    text-align: right;
+    margin-right: 20px;
+  }
+  
+  .title {
+    position: absolute;
+    top: 0;
+    left: 40%;
+    font-size: 25px;
+    font-weight: bold;
+    border: none;
+    background-color: honeydew;
+  }
+  
+  .modal {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0, 0.7);
+    border: none;
+  }
+  
+  .modal-body {
+    min-height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 30px 10px;
+  }
+  
+  .popup-content {
+    background-color: #fff;
+    color: #000;
+    font-size: 20px;
+    max-width: 400px;
+    padding: 10px;
+  }
+  
+  .popup-text {
+    display: flex;
+    padding: 2px;
+    width: 100%;
+    height: 30px;
+    font-size: 20px;
+    border: solid 1px;
+    background-color: white;
+    resize: none;
+  }
+  
+  .popup-button {
+    height: 20%;
+    margin-left: 65%;
+  }
+  
+  button {
+    margin-top: 5px;
+    width: 60px;
+    height: 25px;
+    border-radius: 12px;
+    background-color: blue;
+    color: white;
+  }
+  
+  .message-all {
+    margin: 3px;
+    padding: 2px;
+    width: 98%;
+    font-size: 20px;
+    border: solid 1px;
+    border-radius: 25px;
+    background-color: white;
+  }
+  
+  .not-valid {
+    border-color: red;
+  }
+  
+  .hidden {
+    display: none;
+  }
