@@ -20,6 +20,7 @@ textarea.addEventListener('keydown', (event) => {
       coordinates = document.createElement('p');
       coordinates.innerText = `[${latitude}, ${longitude}] 👀`;
       addMessage(coordinates, textarea, messages);
+      textarea.value = '';
       textarea.removeAttribute('readonly');
     };
     const errorCallback = (error) => {
@@ -45,6 +46,7 @@ ok.addEventListener('click', (e) => {
     coordinates = document.createElement('p');
     coordinates.innerText = `[${coord.latitude}, ${coord.longitude}] 👀`;
     addMessage(coordinates, textarea, messages);
+    textarea.value = '';
     input.value = '';
     input.classList.remove('not-valid');
     modal.classList.add('hidden');
