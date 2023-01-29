@@ -8,6 +8,8 @@
     "build": "webpack --mode production",
     "lint": "eslint .",
     "lint-fix": "eslint . --fix",
+    "stylelint": "stylelint \"**/*.css\"",
+    "stylelint-fix": "stylelint \"**/*.css\" --fix",
     "jest": "jest --coverage",
     "test": "jest",
     "coverage": "jest --coverage",
@@ -32,6 +34,9 @@
     "html-webpack-plugin": "^5.5.0",
     "jest": "^29.4.1",
     "mini-css-extract-plugin": "^2.7.2",
+    "stylelint": "^14.16.1",
+    "stylelint-config-airbnb": "^0.0.0",
+    "stylelint-config-standard": "^29.0.0",
     "webpack": "^5.75.0",
     "webpack-cli": "^5.0.1"
   },

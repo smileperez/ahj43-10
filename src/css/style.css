@@ -1,186 +1,168 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+
 * {
-    margin: 0;
-    padding: 0;
-  }
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  color: #172b4d;
+}
   
-  .container {
-    position: relative;
-    left: 10px;
-    top: 10px;
-    min-width: 300px;
-    min-height: 30%;
-    width: 60%;
-    height: 800px;
-  }
+.container {
+  display: flex;
+  justify-content: center;
+  padding: 30px 0;
+  height: 100vh;
+  background-color: #6667AB;
+  min-width: 300px;
+  min-height: 30%;
+}
   
-  .main {
-    position: relative;
-    padding: 0;
-    margin: 4px;
-    float: left;
-    width: calc(100% - 12px);
-    height: 99%;
-    border: 2px solid blue;
-    background-color: honeydew;
-  }
+.main {
+  display: flex;
+  flex-flow: row wrap;
+  align-content: space-between;
+  padding: 20px 20px;
+  width: calc(100% / 2);
+  height: 99%;
+  border-radius: 10px;
+  background-color: #e6e6e6;
+}
+
+.title {
+  font-size: 16px;
+  font-weight: 600;
+  width: 100%;
+  height: 24px;
+  text-align: center;
+}
   
-  .trello {
-    position: absolute;
-    margin-top: 10%;
-    width: 100%;
-    height: 81%;
-    border: none;
-    background-color: honeydew;
-    overflow-y: auto;
-  }
+.messages {
+  padding: 0 10px 20px 10px;
+  width: 100%;
+  min-height: 300px;
+  height: calc(100% - 79px);
+  overflow-y: auto;
+}
+
+.message {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  padding: 10px 10px;
+  font-size: 14px;
+  border-radius: 6px;
+  box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, .2);
+  background-color: white;
+}
+
+.date {
+  text-align: right;
+  color: gray;
+  font-size: 10px;
+}
+
+.text {
+  padding: 10px 0;
+  font-size: 14px;
+  text-align: left;
+}
+
+.coordinates {
+  text-align: left;
+  color: gray;
+  font-size: 10px;
+}
+
+.textarea {
+  padding: 10px 10px;
+  display: block;
+  width: 100%;
+  height: 55px;
+  font-size: 14px;
+  border-radius: 4px;
+  border: none;
+  outline: none;
+  box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, .2);
+  background-color: white;
+  resize: none;
+}
+
+.textarea:focus {
+  border: none;
+  outline: none;
+  box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, .2);
+}
   
-  .add-tasks-control {
-    margin: 0;
-    padding: 0;
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-    background-color: honeydew;
-  }
+.modal {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0, .8);
+  border: none;
+}
   
-  .add-tasks-input {
-    border: solid 1px black;
-    background-color: white;
-    margin: 1px;
-    padding: 0;
-    width: 99%;
-    resize: none;
-    font-size: 16px;
-  }
+.modal-body {
+  min-height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 30px 10px;
+}
   
-  .add-tasks-submit {
-    float: left;
-    margin-left: 15px;
-    background-color: blue;
-    color: white;
-  }
+.popup-content {
+  background-color: white;
+  color: black;
+  font-size: 14px;
+  max-width: 400px;
+  padding: 10px 10px;
+  border-radius: 10px;
+}
   
-  .add-tasks-submit:hover {
-    cursor: pointer;
-  }
+.popup-text {
+  margin-top: 10px;
+  display: block;
+  padding: 5px;
+  width: 100%;
+  height: 30px;
+  font-size: 14px;
+  border: solid 1px;
+  border-radius: 4px;
+  background-color: white;
+  resize: none;
+}
+
+.error-example {
+  color: grey;
+}
   
-  .add-tasks-cancel {
-    margin-right: 15px;
-    float: right;
-    color: red;
-  }
+.popup-button {
+  margin-top: 10px;
+  display: flex;
+  height: 24px;
+}
   
-  .add-tasks-cancel:hover {
-    cursor: pointer;
-  }
+.button {
+  margin-right: 20px;
+  display: block;
+  width: 80px;
+  height: 24px;
+  background-color: #52a300;
+  color: white;
+  font-size: 12px;
+  border-radius: 4px;
+  border: none;
+}
+
+.not-valid {
+  border-color: red;
+}
   
-  .board {
-    width: 98%;
-    height: 100%;
-    border: 1px solid blue;
-    background-color: whitesmoke;
-  }
-  
-  .text {
-    display: flex;
-    margin: 3px;
-    padding: 2px;
-    width: 98%;
-    height: 55px;
-    font-size: 20px;
-    border: solid 1px;
-    background-color: white;
-    resize: none;
-  }
-  
-  .message {
-    margin: 2px;
-    padding: 2px;
-    width: 98%;
-    font-size: 20px;
-    text-align: center;
-  }
-  
-  .coord {
-    text-align: right;
-    margin-right: 20px;
-  }
-  
-  .title {
-    position: absolute;
-    top: 0;
-    left: 40%;
-    font-size: 25px;
-    font-weight: bold;
-    border: none;
-    background-color: honeydew;
-  }
-  
-  .modal {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0,0,0, 0.7);
-    border: none;
-  }
-  
-  .modal-body {
-    min-height: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 30px 10px;
-  }
-  
-  .popup-content {
-    background-color: #fff;
-    color: #000;
-    font-size: 20px;
-    max-width: 400px;
-    padding: 10px;
-  }
-  
-  .popup-text {
-    display: flex;
-    padding: 2px;
-    width: 100%;
-    height: 30px;
-    font-size: 20px;
-    border: solid 1px;
-    background-color: white;
-    resize: none;
-  }
-  
-  .popup-button {
-    height: 20%;
-    margin-left: 65%;
-  }
-  
-  button {
-    margin-top: 5px;
-    width: 60px;
-    height: 25px;
-    border-radius: 12px;
-    background-color: blue;
-    color: white;
-  }
-  
-  .message-all {
-    margin: 3px;
-    padding: 2px;
-    width: 98%;
-    font-size: 20px;
-    border: solid 1px;
-    border-radius: 25px;
-    background-color: white;
-  }
-  
-  .not-valid {
-    border-color: red;
-  }
-  
-  .hidden {
-    display: none;
-  }
+.hidden {
+  display: none;
+}

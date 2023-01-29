@@ -4,28 +4,26 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Task AHS43-4</title>
+    <title>Task AHS43-10 Geoposition</title>
 </head>
 <body>
     <div class="container">
         <div class="main">
-            <span class="title">Messages</span>
-            <div class="trello">
-            </div>
-            <textarea class="text add-tasks-control" placeholder="For add message please press <alt> + <Enter>"></textarea>
+            <span class="title">News feed</span>
+            <div class="messages"></div>
+            <textarea class="textarea add-tasks-control" placeholder="Для отправки сообщения нажмите <Enter>"></textarea>
         </div>
         <div class="modal hidden">
             <div class="modal-body">
                 <div class="popup-content">
-                <p>Что то пошло не так</p>
-                <p>К сожалению, нам не удалось определить ваше местоположение.
-                    Пожалуйста, дайте разрешение на использование геолокации, либо
-                    введите координаты вручную.</p>
-                <p>Широта и долгота через запятую</p>
+                <p class="error-title">Что то пошло не так.</p>
+                <p class="error-message">К сожалению, нам не удалось определить ваше местоположение.
+                Пожалуйста, разоешите использование геолокации в браузере или укажите координаты вручную.</p>
+                <p class="error-example">Пример ввода: 41.40338, 2.17403</p>
                 <input class="popup-text">
                     <div class="popup-button">
-                    <button id="cancel">Отмена</button>
-                    <button id="ok">Оk</button>
+                    <button class="button cancel">Отмена</button>
+                    <button class="button ok">Оk</button>
                 </div>
                 </div>
             </div>
